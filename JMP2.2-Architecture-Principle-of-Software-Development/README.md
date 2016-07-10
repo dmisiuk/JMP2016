@@ -12,3 +12,9 @@
     The better way is create ProductRepository interface and its instanse use to construct ProductService.
     Each approach for working with products will be implemented in classes based on this interfaces.
     
+*L: Liskov's substitution principle*
+
+    It's broken in inheritance between Product and CubeProduct.
+    After creating cube product with lenth of side 3 for example we can change it's heigh field directly.
+    After invoking getVolume() method we will get unexpected result. 
+    
