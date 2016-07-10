@@ -23,3 +23,9 @@
     IProductService is used to saving, getting products. For adding them to cart, checkout and delivering.
     Their goals should be implemented in different services as CheckoutService, DeliveringService, CartService.
     
+*D: Dependency Inversion principle*
+
+    Its broken in ProductService. We hardcoded instantiantiating instanse for this class in static method initWithDb 
+    and initWithFile where we create according repository.
+    The better way is pass this repository(based on the same interface) to constructor of ProductService.
+    

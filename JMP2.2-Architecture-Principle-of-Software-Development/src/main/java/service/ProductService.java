@@ -17,6 +17,10 @@ public class ProductService implements IProductService {
 
     private boolean isDb;
 
+    private ProductService() {
+
+    }
+
     public static ProductService initWithDB() {
         ProductService productService = new ProductService();
         productService.dbProductRepository = new DBProductRepository();
@@ -56,14 +60,14 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void deliverCart(Cart cart, String address){
+    public void deliverCart(Cart cart, String address) {
         for (Product product : cart.getProducts()) {
             product.deliver(address);
         }
     }
 
     @Override
-    public void checkout(Cart cart){
+    public void checkout(Cart cart) {
         cart.setCheckout(true);
     }
 }
