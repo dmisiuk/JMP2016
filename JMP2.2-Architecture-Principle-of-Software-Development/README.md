@@ -1,3 +1,6 @@
+**Task: Mentee has to implement examples of erroneous application with using SOLID principles**
+
+
 ***SOLID principles***
 
 *S: Single responsibility principle*
