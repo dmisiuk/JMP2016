@@ -18,3 +18,8 @@
     After creating cube product with lenth of side 3 for example we can change it's heigh field directly.
     After invoking getVolume() method we will get unexpected result. 
     
+*I: Interface segregation principle*
+
+    IProductService is used to saving, getting products. For adding them to cart, checkout and delivering.
+    Their goals should be implemented in different services as CheckoutService, DeliveringService, CartService.
+    
