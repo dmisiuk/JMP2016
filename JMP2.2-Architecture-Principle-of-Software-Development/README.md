@@ -12,13 +12,13 @@
 
     In ProductService we use different logic for working with different repositories.
     When we will want to use new repository(for example in memory) we should add logic to ProductService.
-    The better way is create ProductRepository interface and its instanse use to construct ProductService.
+    The better way is create ProductRepository interface and its instance use to construct ProductService.
     Each approach for working with products will be implemented in classes based on this interfaces.
     
 *L: Liskov's substitution principle*
 
     It's broken in inheritance between Product and CubeProduct.
-    After creating cube product with lenth of side 3 for example we can change it's heigh field directly.
+    After creating cube product with length of side 3 for example we can change its height field directly.
     After invoking getVolume() method we will get unexpected result. 
     
 *I: Interface segregation principle*
@@ -28,7 +28,7 @@
     
 *D: Dependency Inversion principle*
 
-    Its broken in ProductService. We hardcoded instantiantiating instanse for this class in static method initWithDb 
+    Its broken in ProductService. We hardcoded instantiating instance for this class in static method initWithDb 
     and initWithFile where we create according repository.
     The better way is pass this repository(based on the same interface) to constructor of ProductService.
     
