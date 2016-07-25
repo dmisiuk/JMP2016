@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="director" class="com.epam.jmp.model.Director">
+        <property name="name" value="Dzmitry"/>
+        <property name="age" value="28"/>
+    </bean>
+
+    <bean id="packer" class="com.epam.jmp.model.Packer">
+        <property name="name" value="Vasia"/>
+        <property name="age" value="23"/>
+        <property name="level" value="88"/>
+    </bean>
+
+    <bean id="driver" class="com.epam.jmp.model.Driver">
+        <property name="name" value="Petia"/>
+        <property name="age" value="28"/>
+        <property name="experience" value="5"/>
+    </bean>
+
+    <bean id="warehouse" class="com.epam.jmp.model.Warehouse">
+        <property name="address" value="Minsk"/>
+        <property name="employees">
+            <list>
+                <ref bean="director"/>
+                <ref bean="packer"/>
+                <ref bean="driver"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="shop" class="com.epam.jmp.model.Shop">
+        <property name="warehouse" ref="warehouse"/>
+    </bean>
+
+</beans>

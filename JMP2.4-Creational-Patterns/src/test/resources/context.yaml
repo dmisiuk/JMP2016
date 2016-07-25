@@ -1,0 +1,30 @@
+beans:
+  director:
+    class: com.epam.jmp.model.Director
+    scope: singelton
+    name: Dzmitry
+    age: 28
+  packer:
+    class: com.epam.jmp.model.Packer
+    scope: singelton
+    name: Vasia
+    age: 23
+    level: 88
+  driver:
+    class: com.epam.jmp.model.Driver
+    scope: singelton
+    age: 28
+    name: Petia
+    experience: 5
+  warehouse:
+    class: com.epam.jmp.model.Warehouse
+    scope: singelton
+    address: Minsk
+    employees:
+    - ref:director
+    - ref:packer
+    - ref:driver
+  shop:
+    class: com.epam.jmp.model.Shop
+    scope: singelton
+    warehouse: ref:warehouse
