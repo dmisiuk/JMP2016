@@ -1,13 +1,11 @@
-import com.epam.jmp.context.YamlApplicationContext;
+import com.epam.jmp.context.PropertiesApplicationConfiguration;
 import com.epam.jmp.model.Director;
 import com.epam.jmp.model.Shop;
 import com.epam.jmp.model.Warehouse;
-import com.sun.jnlp.ApiDialog;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by Dzmitry_Misiuk on 7/25/2016.
@@ -18,8 +16,7 @@ public class TestInitializing {
 
     @Before
     public void init() {
-        //applicationContext = new YamlApplicationContext("/context.yaml");
-        applicationContext = new ClassPathXmlApplicationContext("/application-context.xml");
+        applicationContext = new PropertiesApplicationConfiguration("context.properties");
     }
 
 
