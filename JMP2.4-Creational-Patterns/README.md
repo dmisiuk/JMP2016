@@ -12,4 +12,9 @@ or
 
     ./gradlew clean build test
     
-    
+   
+** Extra task **
+
+Create class Superman
+Since there is only one Superman in the world history – make it a singleton
+
